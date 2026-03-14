@@ -364,16 +364,7 @@ HELP_36 = """ 💑 <b>COUPLE OF THE DAY</b> 💖
 📸 Beautiful framed photo with both DPs will be generated 🖼️  
 📅 Next couple will be selected automatically tomorrow ⏳ """
 
-HELP_37 = """🤖 <b>kya dekh ra hai mdc</b> 🤖
-
-🔹 <b>fah:</b>  
-• <b>desi babhi sxx tape </b> 🎥
-
-🔹 <b>ᴛʜɪs ғᴜɴᴄᴛɪᴏɴ ɪs not sᴜᴘᴘᴏʀᴛᴇᴅ :</b>  
-
-  
-
-✨ <b>maa chudao. </b>"""
+HELP_37 = TEST_HELP_MESSAGE_999
 
 HELP_38 = """💝 <b>LOVE BIRDS TOOLS</b> 🕊️
 
