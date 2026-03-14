@@ -75,29 +75,7 @@ async def show_help_page1(client, callback_query: CallbackQuery):
         reply_markup=help_pannel_page1(_, START=True)
     )
 
-@app.on_callback_query(filters.regex("fork_repo"))
-async def fork_repo_callback(client, query):
-    await query.message.edit_text(
-        text=(
-            "✨ <b>ʙᴜɪʟᴅ Yᴏᴜʀ Oᴡɴ ᴍᴜsɪᴄ ʙᴏᴛ 🎧</b>\n\n"
-            "🚀 ʀᴇᴀᴅʏ ᴛᴏ ʟᴀᴜɴᴄʜ ʏᴏᴜʀ ᴏᴡɴ ʙᴏᴛ?\n"
-            "ғᴏʀᴋ ᴛʜᴇ ʀᴇᴘᴏ ᴀɴᴅ ᴅᴇᴘʟᴏʏ ɪɴ sᴇᴄᴏɴᴅs.\n\n"
-            "🔧 <b>Cᴜsᴛᴏᴍɪᴢᴇ ɪᴛ. Dᴇᴘʟᴏʏ ɪᴛ. Vɪʙᴇ ᴡɪᴛʜ ɪᴛ 🔥</b>"
-        ),
-        disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("🚀 Fᴏʀᴋ Rᴇᴘᴏ", url="https://github.com/NoxxOP/ShrutiMusic/fork"),
-                    InlineKeyboardButton("⚡ Hᴇʀᴏᴋᴜ Dᴇᴘʟᴏʏ", url="https://dashboard.heroku.com/new?template=https://github.com/NoxxOP/ShrutiMusic")
-                ],
-                [
-                    InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="settingsback_helper")
-                ]
-            ]
-        )
-    )
-
+      
 
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup
@@ -126,17 +104,6 @@ async def about_cb(client, callback_query):
     except Exception as e:
         await callback_query.answer(f"❌ Error: {e}", show_alert=True)
 
-@app.on_callback_query(filters.regex("owner_page") & ~BANNED_USERS)
-async def owner_page_cb(client, callback_query):
-    try:
-        lang = "en"
-        _ = get_string(lang)
-        await callback_query.answer()
-        await callback_query.edit_message_reply_markup(
-            reply_markup=InlineKeyboardMarkup(owner_panel(_))
-        )
-    except Exception as e:
-        await callback_query.answer(f"❌ Error: {e}", show_alert=True)
 
 
 
